@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import classes from "./App.css";
 import Person from "./Person/Person";
 
 class App extends Component {
@@ -65,12 +65,12 @@ class App extends Component {
       fontSize: "13px"
     };
 
-    const classes = [];
+    const assignedClasses = [];
     if (this.state.persons.length <= 2) {
-      classes.push("red");
+      assignedClasses.push(classes.red);
     }
     if (this.state.persons.length <= 1) {
-      classes.push("bold");
+      assignedClasses.push(classes.bold);
     }
 
     let persons = null;
@@ -95,9 +95,9 @@ class App extends Component {
       btnStyle.backgroundColor = "red";
     }
     return (
-        <div className="App">
+        <div className={classes.App}>
           <h1>This is React App</h1>
-          <p className={classes.join(" ")}>This is from Root Component</p>
+          <p className={assignedClasses.join(" ")}>This is from Root Component</p>
           <button style={btnStyle} onClick={this.togglePerson}>
             Toggle person
           </button>
