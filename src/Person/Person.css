@@ -1,0 +1,16 @@
+.Person {
+	width: 60%;
+	border: 1px solid #225cdb;
+	box-shadow: 1px 1px 3px #1e44cc;
+	margin: 10px auto;
+	padding: 15px;
+	text-align: center;
+}
+.Person input {
+    padding: 10px;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+    background: #225cdb;
+    color: #fff;
+}
